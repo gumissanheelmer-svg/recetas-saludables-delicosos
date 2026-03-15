@@ -4,9 +4,10 @@ import ebookCover from "@/assets/ebook-cover.png";
 
 const bullets = [
   "100 recetas saludables",
-  "Ingredientes simples",
+  "Ingredientes simples y naturales",
   "Preparación rápida",
-  "Alimentación equilibrada",
+  "Ideal para bebés de 6 a 12 meses",
+  "Incluye guía BLW y menú semanal",
 ];
 
 const HeroSection = () => {
