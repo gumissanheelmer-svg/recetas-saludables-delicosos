@@ -136,20 +136,30 @@
   }
 
   .btn-hero {
-    @apply inline-flex items-center justify-center font-bold text-lg rounded-xl px-8 py-4;
+    @apply inline-flex items-center justify-center font-bold text-lg rounded-xl px-8 py-4 relative;
     background: var(--gradient-primary);
     color: hsl(var(--primary-foreground));
-    box-shadow: var(--shadow-primary);
+    box-shadow: var(--shadow-primary), 0 0 20px rgba(46,204,113,0.2), 0 0 60px rgba(46,204,113,0.1);
     transition: transform 0.15s var(--easing), box-shadow 0.2s var(--easing);
+    animation: cta-glow 2.5s ease-in-out infinite;
   }
 
   .btn-hero:hover {
-    transform: translateY(-1px) scale(1.01);
-    box-shadow: 0 6px 20px rgba(52,168,83,0.35);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 24px rgba(46,204,113,0.4), 0 0 30px rgba(46,204,113,0.3), 0 0 80px rgba(46,204,113,0.15);
   }
 
   .btn-hero:active {
     transform: translateY(0) scale(0.99);
+  }
+
+  @keyframes cta-glow {
+    0%, 100% {
+      box-shadow: var(--shadow-primary), 0 0 20px rgba(46,204,113,0.15), 0 0 60px rgba(46,204,113,0.08);
+    }
+    50% {
+      box-shadow: var(--shadow-primary), 0 0 30px rgba(46,204,113,0.35), 0 0 80px rgba(46,204,113,0.15);
+    }
   }
 
   .btn-accent {
