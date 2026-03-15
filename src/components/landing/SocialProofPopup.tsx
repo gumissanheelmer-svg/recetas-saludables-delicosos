@@ -21,9 +21,17 @@ const SocialProofPopup = () => {
       setTimeout(() => setCurrent(null), 5000);
     };
 
-    const initialDelay = setTimeout(showNext, 2000);
+    const initialDelay = setTimeout(showNext, 8000);
 
-    const interval = setInterval(showNext, 2000);
+    const randomInterval = () => 15000 + Math.random() * 10000;
+    let intervalId: ReturnType<typeof setTimeout>;
+    const scheduleNext = () => {
+      intervalId = setTimeout(() => {
+        showNext();
+        scheduleNext();
+      }, randomInterval());
+    };
+    scheduleNext();
 
     return () => {
       clearTimeout(initialDelay);
