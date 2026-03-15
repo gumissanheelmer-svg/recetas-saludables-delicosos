@@ -1,45 +1,63 @@
 import { motion } from "framer-motion";
-import { ShieldCheck } from "lucide-react";
+import { ShieldCheck, Check } from "lucide-react";
+
+const included = [
+  "100 recetas saludables",
+  "5 etapas de alimentación",
+  "4 bonos exclusivos",
+  "Método BLW incluido",
+  "Acceso digital inmediato",
+  "Garantía de 7 días",
+];
 
 const FinalOfferSection = () => {
   return (
-    <section id="oferta" className="section-spacing bg-muted">
-      <div className="container mx-auto max-w-2xl text-center">
-        <motion.h2
+    <section id="oferta" className="section-padding bg-muted">
+      <div className="section-container max-w-2xl text-center">
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, ease: [0.2, 0, 0, 1] }}
-          className="font-display text-3xl md:text-5xl font-bold text-foreground"
+          transition={{ duration: 0.5 }}
         >
-          Empieza hoy a alimentar mejor a tu bebé
-        </motion.h2>
+          <span className="tag-label bg-accent/10 text-accent inline-block mb-4">Oferta limitada</span>
+          <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground">
+            Empieza hoy a alimentar mejor a tu bebé
+          </h2>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.2, duration: 0.5, ease: [0.2, 0, 0, 1] }}
-          className="mt-10 card-soft mx-auto max-w-md"
+          transition={{ delay: 0.2, duration: 0.5 }}
+          className="mt-10 glass-card p-8 md:p-10"
         >
-          <p className="font-display text-xl font-bold text-foreground">Primeros Sabores</p>
-          <p className="text-muted-foreground font-body text-sm mt-1">100 Recetas + 5 Bonos Exclusivos</p>
-          <div className="mt-6 flex items-baseline justify-center gap-4">
-            <span className="price-old text-2xl">$19.99</span>
-            <div>
-              <span className="tag-gratis block">HOY</span>
-              <span className="font-display text-5xl font-bold text-foreground tabular-nums">$9.99</span>
+          <p className="font-display text-xl font-bold text-foreground">100 Recetas Saludables para Bebés</p>
+          <p className="text-sm text-muted-foreground mt-1">Guía completa + 4 bonos exclusivos</p>
+
+          <div className="mt-8 flex items-baseline justify-center gap-4">
+            <span className="price-strike text-2xl font-medium">$39.99</span>
+            <div className="flex flex-col items-center leading-none">
+              <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-accent">HOY SOLO</span>
+              <span className="font-display text-5xl md:text-6xl font-extrabold text-foreground tabular-nums mt-1">$19.99</span>
             </div>
           </div>
-          <motion.a
-            href="#"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            transition={{ duration: 0.1 }}
-            className="mt-8 inline-flex w-full items-center justify-center bg-primary text-primary-foreground px-8 py-4 rounded-full font-display font-bold text-lg shadow-lg hover:shadow-[0_10px_20px_rgba(59,142,89,0.2)] transition-shadow animate-subtle-pulse"
-          >
-            Descargar Ebook Ahora
-          </motion.a>
+
+          <div className="mt-8 grid grid-cols-2 gap-3 text-left max-w-sm mx-auto">
+            {included.map((item) => (
+              <div key={item} className="flex items-center gap-2">
+                <div className="w-5 h-5 rounded-full bg-primary/15 flex items-center justify-center flex-shrink-0">
+                  <Check className="w-3 h-3 text-primary" strokeWidth={3} />
+                </div>
+                <span className="text-sm text-foreground">{item}</span>
+              </div>
+            ))}
+          </div>
+
+          <a href="#" className="btn-hero w-full mt-8 animate-pulse-soft">
+            Comprar Ahora — $19.99
+          </a>
         </motion.div>
 
         {/* Guarantee */}
@@ -47,11 +65,16 @@ const FinalOfferSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.4, duration: 0.5, ease: [0.2, 0, 0, 1] }}
-          className="mt-8 flex items-center justify-center gap-3 text-muted-foreground"
+          transition={{ delay: 0.4, duration: 0.5 }}
+          className="mt-8 glass-card p-6 flex items-center gap-4"
         >
-          <ShieldCheck className="w-6 h-6 text-primary" />
-          <span className="font-body text-sm">Garantía de satisfacción de 7 días. Si no te gusta, te devolvemos tu dinero.</span>
+          <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+            <ShieldCheck className="w-6 h-6 text-primary" />
+          </div>
+          <div className="text-left">
+            <p className="font-display font-bold text-foreground">Compra sin riesgo</p>
+            <p className="text-sm text-muted-foreground">Garantía de satisfacción de 7 días. Si no te gusta, te devolvemos tu dinero sin preguntas.</p>
+          </div>
         </motion.div>
       </div>
     </section>

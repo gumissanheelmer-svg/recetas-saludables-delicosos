@@ -2,37 +2,39 @@ import { motion } from "framer-motion";
 
 const FinalCtaSection = () => {
   return (
-    <section className="section-spacing bg-primary">
-      <div className="container mx-auto max-w-3xl text-center">
+    <section className="section-padding relative overflow-hidden" style={{ background: "var(--gradient-primary)" }}>
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-background rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-background rounded-full blur-3xl" />
+      </div>
+      <div className="section-container max-w-3xl text-center relative">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, ease: [0.2, 0, 0, 1] }}
-          className="font-display text-3xl md:text-5xl font-bold text-primary-foreground"
+          transition={{ duration: 0.5 }}
+          className="font-display text-3xl md:text-5xl font-extrabold text-primary-foreground"
         >
-          Compra ahora y comienza hoy mismo
+          Empieza hoy la alimentación saludable de tu bebé
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.1, duration: 0.5, ease: [0.2, 0, 0, 1] }}
-          className="mt-4 text-lg text-primary-foreground/80 font-body"
+          transition={{ delay: 0.1, duration: 0.5 }}
+          className="mt-5 text-lg text-primary-foreground/80"
         >
-          Prepara comidas saludables para tu bebé con confianza y facilidad.
+          100 recetas + 4 bonos exclusivos por solo $19.99
         </motion.p>
         <motion.a
           href="#oferta"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.2, duration: 0.5, ease: [0.2, 0, 0, 1] }}
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-          className="mt-8 inline-flex items-center justify-center bg-accent text-accent-foreground px-10 py-4 rounded-full font-display font-bold text-lg shadow-lg transition-shadow"
+          transition={{ delay: 0.2, duration: 0.5 }}
+          className="btn-accent mt-8 text-lg"
         >
-          Descargar Ebook – $9.99
+          Descargar Ebook Ahora
         </motion.a>
       </div>
     </section>

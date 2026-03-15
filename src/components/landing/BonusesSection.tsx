@@ -1,47 +1,68 @@
 import { motion } from "framer-motion";
-import { IceCreamCone, Moon, Ban, CalendarDays, Baby } from "lucide-react";
+import { CalendarDays, Ban, Moon, IceCreamCone } from "lucide-react";
 
 const bonuses = [
-  { icon: IceCreamCone, title: "Receta de Yogur Casero", desc: "Aprende a preparar yogur natural y saludable en casa." },
-  { icon: Moon, title: "Consejos para mejorar el sueño del bebé", desc: "Técnicas probadas para noches más tranquilas." },
-  { icon: Ban, title: "Lista de alimentos prohibidos", desc: "Conoce qué alimentos evitar en cada etapa." },
-  { icon: CalendarDays, title: "Menú semanal de 6 a 12 meses", desc: "Planificación completa semana a semana." },
-  { icon: Baby, title: "Guía del método BLW", desc: "Introducción al Baby Led Weaning paso a paso." },
+  { icon: CalendarDays, num: "01", title: "Menú semanal para bebés", desc: "Planifica comidas completas y equilibradas para toda la semana." },
+  { icon: Ban, num: "02", title: "Guía de alimentos prohibidos", desc: "Conoce exactamente qué alimentos evitar en cada etapa." },
+  { icon: Moon, num: "03", title: "Consejos de sueño infantil", desc: "Técnicas probadas para noches más tranquilas." },
+  { icon: IceCreamCone, num: "04", title: "Receta de yogur casero", desc: "Prepara yogur natural y saludable en casa para tu bebé." },
 ];
+
+const container = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.1 } },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] } },
+};
 
 const BonusesSection = () => {
   return (
-    <section className="section-spacing">
-      <div className="container mx-auto max-w-5xl text-center">
-        <motion.h2
+    <section className="section-padding">
+      <div className="section-container">
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, ease: [0.2, 0, 0, 1] }}
-          className="font-display text-3xl md:text-5xl font-bold text-foreground"
+          transition={{ duration: 0.5 }}
+          className="text-center max-w-2xl mx-auto"
         >
-          Además recibirás <span className="text-accent">5 bonos exclusivos</span>
-        </motion.h2>
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {bonuses.map((b, i) => (
+          <span className="tag-label bg-accent/10 text-accent inline-block mb-4">Extras</span>
+          <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground">
+            Bonos exclusivos incluidos
+          </h2>
+          <p className="mt-4 text-muted-foreground text-lg">
+            Sin costo adicional. Incluidos con tu compra hoy.
+          </p>
+        </motion.div>
+
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="mt-14 grid grid-cols-1 sm:grid-cols-2 gap-5"
+        >
+          {bonuses.map((b) => (
             <motion.div
               key={b.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.5, ease: [0.2, 0, 0, 1] }}
-              whileHover={{ y: -4 }}
-              className="card-soft text-left relative overflow-hidden"
+              variants={item}
+              whileHover={{ y: -3 }}
+              className="glass-card p-7 flex gap-5 items-start relative overflow-hidden"
             >
-              <span className="tag-gratis mb-4 inline-block">GRATIS</span>
-              <div className="w-12 h-12 rounded-inner bg-secondary flex items-center justify-center mb-4">
-                <b.icon className="w-6 h-6 text-primary" strokeWidth={2} />
+              <span className="absolute top-4 right-4 tag-label bg-accent/10 text-accent">GRATIS</span>
+              <div className="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                <b.icon className="w-5 h-5 text-accent" strokeWidth={2} />
               </div>
-              <h3 className="font-display text-lg font-bold text-foreground">{b.title}</h3>
-              <p className="mt-2 text-muted-foreground text-sm font-body">{b.desc}</p>
+              <div className="pr-16">
+                <h3 className="font-display font-bold text-foreground">{b.title}</h3>
+                <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed">{b.desc}</p>
+              </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
