@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { Utensils, ShieldCheck, Sprout, CalendarCheck } from "lucide-react";
 
 const solutions = [
-  { icon: Utensils, title: "Recetas saludables en minutos", desc: "Preparaciones rápidas con ingredientes del día a día." },
-  { icon: ShieldCheck, title: "Introduce alimentos de forma segura", desc: "Guía paso a paso para cada etapa de alimentación." },
-  { icon: Sprout, title: "Crea hábitos saludables", desc: "Establece bases nutritivas desde los primeros meses." },
-  { icon: CalendarCheck, title: "Organiza las comidas", desc: "Planifica toda la semana sin estrés." },
+  { icon: Utensils, title: "Introduce alimentos correctamente", desc: "Guía paso a paso para cada etapa de alimentación." },
+  { icon: Sprout, title: "Recetas para el desarrollo del bebé", desc: "Comidas equilibradas que apoyan el crecimiento saludable." },
+  { icon: ShieldCheck, title: "Alimentación natural sin complicaciones", desc: "Ingredientes simples del día a día, sin complicarte." },
+  { icon: CalendarCheck, title: "Organiza las comidas de la semana", desc: "Planifica toda la semana con el menú incluido." },
 ];
 
 const container = {

@@ -27,13 +27,12 @@ const HeroSection = () => {
             </div>
 
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.08] text-foreground" style={{ textWrap: "balance" as any }}>
-              Alimenta a tu bebé de forma{" "}
-              <span className="gradient-text">saludable</span>{" "}
-              desde los primeros meses
+              Alimenta a tu bebé con recetas{" "}
+              <span className="gradient-text">saludables</span>, simples y seguras.
             </h1>
 
             <p className="mt-5 text-lg text-muted-foreground leading-relaxed max-w-xl" style={{ textWrap: "pretty" as any }}>
-              Descubre 100 recetas fáciles, nutritivas y seguras para bebés de 6 a 12 meses.
+              Descubre 100 recetas nutritivas para bebés de 6 a 12 meses que cualquier padre puede preparar en minutos.
             </p>
 
             <div className="mt-8 grid grid-cols-2 gap-3">
