@@ -65,7 +65,7 @@ const HeroSection = () => {
               <div className="flex items-baseline gap-3">
                 <span className="price-strike text-xl font-medium">$39.99</span>
                 <div className="flex flex-col leading-none">
-                  <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-accent">HOY SOLO</span>
+                  <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-primary">HOY SOLO</span>
                   <span className="font-display text-3xl font-extrabold text-foreground tabular-nums mt-0.5">$19.99</span>
                 </div>
               </div>

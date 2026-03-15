@@ -2,7 +2,7 @@ import CountdownTimer from "./CountdownTimer";
 
 const TopBar = () => {
   return (
-    <div className="bg-foreground text-background py-3 px-4">
+    <div className="bg-primary text-primary-foreground py-3 px-4">
       <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-sm font-medium">
         <span>
           🔥 <span className="font-bold">Oferta limitada:</span>{" "}
