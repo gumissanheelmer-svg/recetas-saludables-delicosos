@@ -90,7 +90,7 @@ const HeroSection = () => {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.9, type: "spring", stiffness: 180 }}
-                className="absolute -top-3 -right-3 bg-accent text-accent-foreground rounded-2xl w-[72px] h-[72px] flex flex-col items-center justify-center font-display font-extrabold shadow-lg"
+                className="absolute -top-3 -right-3 bg-primary text-primary-foreground rounded-2xl w-[72px] h-[72px] flex flex-col items-center justify-center font-display font-extrabold shadow-lg"
               >
                 <span className="text-[9px] uppercase tracking-wider opacity-90">Solo</span>
                 <span className="text-xl leading-none tabular-nums">$19.99</span>
