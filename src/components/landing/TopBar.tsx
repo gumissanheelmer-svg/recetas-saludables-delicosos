@@ -7,7 +7,7 @@ const TopBar = () => {
         <span>
           🔥 <span className="font-bold">Oferta limitada:</span>{" "}
           <span className="price-strike text-background/50">$39.99</span>{" "}
-          <span className="font-bold text-primary">$19.99</span>
+          <span className="font-bold text-primary-foreground">$19.99</span>
         </span>
         <div className="flex items-center gap-2">
           <span className="text-background/60 text-xs hidden sm:inline">Termina en</span>
