@@ -11,10 +11,11 @@ import FaqSection from "@/components/landing/FaqSection";
 import FinalCtaSection from "@/components/landing/FinalCtaSection";
 import FooterSection from "@/components/landing/FooterSection";
 import SocialProofPopup from "@/components/landing/SocialProofPopup";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background transition-colors duration-300">
       <TopBar />
       <HeroSection />
       <ProblemSection />
@@ -28,6 +29,7 @@ const Index = () => {
       <FinalCtaSection />
       <FooterSection />
       <SocialProofPopup />
+      <ThemeToggle />
     </div>
   );
 };
