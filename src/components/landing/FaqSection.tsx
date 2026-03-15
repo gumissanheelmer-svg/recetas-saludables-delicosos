@@ -16,10 +16,10 @@ const FaqSection = () => {
     <section className="section-padding">
       <div className="section-container max-w-3xl">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
           <span className="tag-label bg-muted text-muted-foreground inline-block mb-4">FAQ</span>
@@ -32,21 +32,22 @@ const FaqSection = () => {
           {faqs.map((faq, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.05, duration: 0.4 }}
-              className="glass-card p-6 cursor-pointer"
+              transition={{ delay: i * 0.08, duration: 0.4 }}
+              whileHover={{ scale: 1.01 }}
+              className="glass-card p-6 cursor-pointer group"
               onClick={() => setOpen(open === i ? null : i)}
             >
               <div className="flex items-center justify-between">
-                <h3 className="font-display font-bold text-foreground pr-4">{faq.q}</h3>
+                <h3 className="font-display font-bold text-foreground pr-4 group-hover:text-primary transition-colors duration-200">{faq.q}</h3>
                 <motion.div
                   animate={{ rotate: open === i ? 45 : 0 }}
-                  transition={{ duration: 0.2 }}
+                  transition={{ duration: 0.3, type: "spring", stiffness: 200 }}
                   className="flex-shrink-0"
                 >
-                  <Plus className="w-5 h-5 text-muted-foreground" />
+                  <Plus className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors duration-200" />
                 </motion.div>
               </div>
               <AnimatePresence>
@@ -55,7 +56,7 @@ const FaqSection = () => {
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
                     className="overflow-hidden"
                   >
                     <p className="text-muted-foreground mt-3 leading-relaxed text-[15px]">{faq.a}</p>
