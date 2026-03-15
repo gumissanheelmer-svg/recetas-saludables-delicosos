@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ShieldCheck, Check } from "lucide-react";
+import CountdownTimer from "./CountdownTimer";
 
 const included = [
   "100 recetas saludables",
