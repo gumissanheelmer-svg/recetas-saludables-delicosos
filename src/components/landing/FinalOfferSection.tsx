@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ShieldCheck, Check } from "lucide-react";
+import CountdownTimer from "./CountdownTimer";
 
 const included = [
   "100 recetas saludables",
@@ -35,6 +36,12 @@ const FinalOfferSection = () => {
         >
           <p className="font-display text-xl font-bold text-foreground">100 Recetas Saludables para Bebés</p>
           <p className="text-sm text-muted-foreground mt-1">Guía completa + 4 bonos exclusivos</p>
+          <div className="mt-5 flex justify-center">
+            <div className="flex items-center gap-3 bg-muted rounded-xl px-5 py-3">
+              <span className="text-sm font-medium text-muted-foreground">La oferta termina en</span>
+              <CountdownTimer hours={2} />
+            </div>
+          </div>
 
           <div className="mt-8 flex items-baseline justify-center gap-4">
             <span className="price-strike text-2xl font-medium">$39.99</span>
