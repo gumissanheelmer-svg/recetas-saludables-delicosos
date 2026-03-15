@@ -35,7 +35,7 @@ const SocialProofPopup = () => {
 
     return () => {
       clearTimeout(initialDelay);
-      clearInterval(interval);
+      clearTimeout(intervalId);
     };
   }, []);
 
