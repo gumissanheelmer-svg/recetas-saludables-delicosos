@@ -4,7 +4,7 @@ import ProblemSection from "@/components/landing/ProblemSection";
 import SolutionSection from "@/components/landing/SolutionSection";
 import WhatYouGetSection from "@/components/landing/WhatYouGetSection";
 import BonusesSection from "@/components/landing/BonusesSection";
-import BenefitsSection from "@/components/landing/BenefitsSection";
+import OrderBumpSection from "@/components/landing/OrderBumpSection";
 import TestimonialsSection from "@/components/landing/TestimonialsSection";
 import FinalOfferSection from "@/components/landing/FinalOfferSection";
 import FaqSection from "@/components/landing/FaqSection";
@@ -20,7 +20,7 @@ const Index = () => {
       <SolutionSection />
       <WhatYouGetSection />
       <BonusesSection />
-      <BenefitsSection />
+      <OrderBumpSection />
       <TestimonialsSection />
       <FinalOfferSection />
       <FaqSection />

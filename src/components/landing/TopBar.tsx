@@ -1,8 +1,10 @@
 const TopBar = () => {
   return (
-    <div className="bg-primary text-primary-foreground text-center py-2.5 px-4 font-body text-sm">
-      🎉 <span className="font-bold">Oferta especial:</span> 50% de descuento — <span className="price-old text-primary-foreground/70">$19.99</span>{" "}
-      <span className="font-bold">$9.99</span>
+    <div className="bg-foreground text-background text-center py-2.5 px-4 text-sm font-medium tracking-wide">
+      🔥 <span className="font-bold">Oferta limitada:</span>{" "}
+      <span className="price-strike text-background/50">$39.99</span>{" "}
+      <span className="font-bold text-accent">$19.99</span>{" "}
+      — ¡Ahorra 50% hoy!
     </div>
   );
 };
