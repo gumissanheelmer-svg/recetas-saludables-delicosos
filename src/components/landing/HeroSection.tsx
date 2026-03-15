@@ -132,7 +132,7 @@ const HeroSection = () => {
                   transition={{ duration: 0.5 }}
                 />
                 <Sparkles className="w-5 h-5 mr-2" />
-                Descargar Ebook Ahora
+                Comprar Ahora
               </motion.a>
               <div className="flex items-baseline gap-3">
                 <motion.span
