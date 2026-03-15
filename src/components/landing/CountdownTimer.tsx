@@ -42,7 +42,7 @@ const CountdownTimer = ({ hours = 2, minutes = 0, seconds = 0 }: CountdownTimerP
         <div key={unit.label} className="flex items-center gap-1.5">
           {i > 0 && <span className="text-foreground/30 font-bold text-lg">:</span>}
           <div className="flex flex-col items-center">
-            <span className="bg-foreground text-background font-display font-extrabold text-xl tabular-nums px-3 py-1.5 rounded-lg leading-none min-w-[44px] text-center">
+            <span className="bg-primary text-primary-foreground font-display font-extrabold text-xl tabular-nums px-3 py-1.5 rounded-lg leading-none min-w-[44px] text-center">
               {unit.val}
             </span>
             <span className="text-[10px] text-muted-foreground mt-1 uppercase tracking-wider">{unit.label}</span>

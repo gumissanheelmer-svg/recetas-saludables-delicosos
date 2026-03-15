@@ -46,7 +46,7 @@ const FinalOfferSection = () => {
           <div className="mt-8 flex items-baseline justify-center gap-4">
             <span className="price-strike text-2xl font-medium">$39.99</span>
             <div className="flex flex-col items-center leading-none">
-              <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-accent">HOY SOLO</span>
+              <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-primary">HOY SOLO</span>
               <span className="font-display text-5xl md:text-6xl font-extrabold text-foreground tabular-nums mt-1">$19.99</span>
             </div>
           </div>

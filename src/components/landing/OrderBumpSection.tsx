@@ -51,7 +51,7 @@ const OrderBumpSection = () => {
               </p>
               <div className="mt-3 flex items-baseline gap-3">
                 <span className="price-strike text-base">$19.99</span>
-                <span className="font-display text-xl font-extrabold text-accent tabular-nums">$9.99</span>
+                <span className="font-display text-xl font-extrabold text-primary tabular-nums">$9.99</span>
               </div>
             </div>
           </div>
