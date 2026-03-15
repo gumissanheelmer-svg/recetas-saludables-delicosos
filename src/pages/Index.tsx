@@ -10,6 +10,7 @@ import FinalOfferSection from "@/components/landing/FinalOfferSection";
 import FaqSection from "@/components/landing/FaqSection";
 import FinalCtaSection from "@/components/landing/FinalCtaSection";
 import FooterSection from "@/components/landing/FooterSection";
+import SocialProofPopup from "@/components/landing/SocialProofPopup";
 
 const Index = () => {
   return (
@@ -26,6 +27,7 @@ const Index = () => {
       <FaqSection />
       <FinalCtaSection />
       <FooterSection />
+      <SocialProofPopup />
     </div>
   );
 };

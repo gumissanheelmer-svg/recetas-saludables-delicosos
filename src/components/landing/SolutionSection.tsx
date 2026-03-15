@@ -29,9 +29,9 @@ const SolutionSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center max-w-2xl mx-auto"
         >
-          <span className="tag-label bg-primary/10 text-primary inline-block mb-4">La solución</span>
+          <span className="tag-label bg-primary/10 text-primary inline-block mb-4">Aprenderás</span>
           <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground">
-            La guía completa para padres modernos
+            Todo lo que aprenderás con esta guía
           </h2>
           <p className="mt-4 text-muted-foreground text-lg">
             Todo lo que necesitas para alimentar a tu bebé con confianza.
