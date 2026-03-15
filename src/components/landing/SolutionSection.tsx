@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { Utensils, ShieldCheck, Sprout, CalendarCheck } from "lucide-react";
 
 const solutions = [
-  { icon: Utensils, title: "Recetas saludables en minutos", desc: "Preparaciones rápidas con ingredientes del día a día." },
-  { icon: ShieldCheck, title: "Introduce alimentos de forma segura", desc: "Guía paso a paso para cada etapa de alimentación." },
-  { icon: Sprout, title: "Crea hábitos saludables", desc: "Establece bases nutritivas desde los primeros meses." },
-  { icon: CalendarCheck, title: "Organiza las comidas", desc: "Planifica toda la semana sin estrés." },
+  { icon: Utensils, title: "Introduce alimentos correctamente", desc: "Guía paso a paso para cada etapa de alimentación." },
+  { icon: Sprout, title: "Recetas para el desarrollo del bebé", desc: "Comidas equilibradas que apoyan el crecimiento saludable." },
+  { icon: ShieldCheck, title: "Alimentación natural sin complicaciones", desc: "Ingredientes simples del día a día, sin complicarte." },
+  { icon: CalendarCheck, title: "Organiza las comidas de la semana", desc: "Planifica toda la semana con el menú incluido." },
 ];
 
 const container = {
@@ -29,9 +29,9 @@ const SolutionSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center max-w-2xl mx-auto"
         >
-          <span className="tag-label bg-primary/10 text-primary inline-block mb-4">La solución</span>
+          <span className="tag-label bg-primary/10 text-primary inline-block mb-4">Aprenderás</span>
           <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground">
-            La guía completa para padres modernos
+            Todo lo que aprenderás con esta guía
           </h2>
           <p className="mt-4 text-muted-foreground text-lg">
             Todo lo que necesitas para alimentar a tu bebé con confianza.
