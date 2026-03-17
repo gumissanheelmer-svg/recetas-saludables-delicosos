@@ -107,6 +107,8 @@ const FinalOfferSection = () => {
 
           <motion.a
             href="https://pay.hotmart.com/I104946227B"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-hero w-full mt-8 relative overflow-hidden group"
             whileHover={{ scale: 1.02, y: -2 }}
             whileTap={{ scale: 0.98 }}
@@ -114,7 +116,7 @@ const FinalOfferSection = () => {
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           >
             <Zap className="w-5 h-5 mr-2" />
-            Comprar Ahora — $19.99
+            ¡Sí, Quiero Alimentar Mejor a Mi Bebé!
           </motion.a>
         </motion.div>
 

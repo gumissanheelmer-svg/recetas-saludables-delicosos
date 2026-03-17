@@ -36,6 +36,8 @@ const FinalCtaSection = () => {
         </motion.p>
         <motion.a
           href="https://pay.hotmart.com/I104946227B"
+          target="_blank"
+          rel="noopener noreferrer"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -45,7 +47,7 @@ const FinalCtaSection = () => {
           className="inline-flex items-center justify-center font-bold text-lg rounded-xl px-8 py-4 mt-8 bg-background text-foreground shadow-lg"
         >
           <Sparkles className="w-5 h-5 mr-2" />
-          Descargar Ebook Ahora
+          ¡Descargar Mi Ebook Ahora!
         </motion.a>
       </div>
     </section>
