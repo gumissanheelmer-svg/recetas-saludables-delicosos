@@ -35,7 +35,7 @@ const FinalCtaSection = () => {
           100 recetas + 4 bonos exclusivos por solo $19.99
         </motion.p>
         <motion.a
-          href="#oferta"
+          href="https://pay.hotmart.com/I104946227B"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
