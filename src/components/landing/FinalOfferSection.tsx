@@ -106,7 +106,7 @@ const FinalOfferSection = () => {
           </div>
 
           <motion.a
-            href="#"
+            href="https://pay.hotmart.com/I104946227B"
             className="btn-hero w-full mt-8 relative overflow-hidden group"
             whileHover={{ scale: 1.02, y: -2 }}
             whileTap={{ scale: 0.98 }}

@@ -120,7 +120,7 @@ const HeroSection = () => {
               className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-6"
             >
               <motion.a
-                href="#oferta"
+                href="https://pay.hotmart.com/I104946227B"
                 className="btn-hero relative overflow-hidden group"
                 whileHover={{ scale: 1.03, y: -2 }}
                 whileTap={{ scale: 0.98 }}
